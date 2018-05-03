@@ -2,9 +2,8 @@ server:
   port: 7999
 
 zuul:
-  prefix: /api
   routes:
-    user:
+    user-service:
       path: /u/**
       serviceId: user-service
 
