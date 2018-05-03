@@ -6,6 +6,9 @@ zuul:
     user-service:
       path: /u/**
       serviceId: user-service
+    department-service:
+      path: /d/**
+      serviceId: department-service
 
 eureka:
   client:
