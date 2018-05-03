@@ -3,12 +3,8 @@ server:
 
 zuul:
   routes:
-    user-service:
-      path: /u/**
-      serviceId: user-service
-    department-service:
-      path: /d/**
-      serviceId: department-service
+    department-service: /d/**
+    user-service: /u/**
 
 eureka:
   client:
