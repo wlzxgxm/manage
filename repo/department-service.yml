@@ -8,3 +8,6 @@ spring:
     password: root
   jpa:
     show-sql: true
+feign:
+  hystrix:
+    enabled: true
