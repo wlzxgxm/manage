@@ -1,10 +1,12 @@
+server:
+  port: 8062
 spring:
   datasource:
-      url: jdbc:mysql://${RESMAN_SERVICE_ADDR:master.qyos.com:30799}/cybertron_resman?useUnicode=true&characterEncoding=utf8&useSSL=false
-      username: root
-      password: 1q2w3e4r
-      driver-class-name: com.mysql.jdbc.Driver
-   hikari:
+    url: jdbc:mysql://${RESMAN_SERVICE_ADDR:master.qyos.com:30799}/cybertron_resman?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 1q2w3e4r
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
       maximum-pool-size: 15
       idle-timeout: 30000
       auto-commit: true
@@ -12,6 +14,12 @@ spring:
       connection-test-query: SELECT 1
   jpa:
     generate-ddl: true
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: configsr
+
 bigbang:
   url: api-gateway-qybe.qyos.com
 openshift:
