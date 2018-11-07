@@ -1,5 +1,5 @@
 env: test
-name: gxm11
+name: gxm1122
 spring:
     rabbitmq:
       host: 192.168.1.206
